@@ -27,9 +27,11 @@
               if ($cksemester != $row[4]) {
                   $res2 = pg_query($db, "select calc_student_gpa($stuid, '$cksemester')");
                   $gpa = pg_fetch_row($res2);
-                  echo "<tr class='table-secondary'>";
-                    echo "<th>GPA:</th>";
-                    echo "<th>$gpa[0]</th>";
+                  echo "<tr>";
+                    echo "<th></th>";
+                    echo "<th></th>";
+                    echo "<th class='table-active'>GPA:</th>";
+                    echo "<th class='table-active'>$gpa[0]</th>";
                   echo "<tr>";
                   $cksemester = $row[4];
                   $gpacount += $gpa[0];
@@ -45,9 +47,11 @@
             }
                   $res2 = pg_query($db, "select calc_student_gpa($stuid, '$lastsemester')");
                   $gpa = pg_fetch_row($res2);
-                  echo "<tr class='table-secondary'>";
-                    echo "<th>GPA:</th>";
-                    echo "<th>$gpa[0]</th>";
+                  echo "<tr>";
+                    echo "<th></th>";
+                    echo "<th></th>";
+                    echo "<th class='table-active'>GPA:</th>";
+                    echo "<th class='table-active'>$gpa[0]</th>";
                   echo "<tr>";
                   $gpacount += $gpa[0];
                   $classcount++;
@@ -59,6 +63,8 @@
                 } else {
                     echo "<tr class='table-danger'>";
                 }
+                    echo "<th></th>";
+                    echo "<th></th>";
                 echo "<th>Overall GPA:</th>";
                 echo "<th>$ogpa</th>";
             echo "<tr>";
