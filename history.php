@@ -72,6 +72,10 @@
           </tbody>
         </table>
       </div>
+    <button class="btn btn-primary">
+      Print Report Card
+    </button>
+    </div>
 </div>
 
 <?php

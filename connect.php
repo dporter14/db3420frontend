@@ -5,6 +5,6 @@
         echo "<p>Connection unsuccessful</p>";
     } else {
         $_SESSION["db"] = $db;
-        echo "Connetion successful";
+        echo "<br>";
     }
 ?>

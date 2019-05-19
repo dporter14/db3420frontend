@@ -42,7 +42,7 @@
 <body class="text-center">
   <form class="form-signin" action="student_home.php" method="POST">
     <div class="container">
-      <img class="mb-4" src="" alt="school logo" width="72" height="72">
+      <img class="mb-4" src="laptopcat.png" alt="school logo" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputId" class="sr-only">Student ID</label>
       <input type="number" name="studentid" id="inputNumber" class="form-control" placeholder="Student ID" required autofocus>
