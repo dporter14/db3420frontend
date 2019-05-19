@@ -74,7 +74,7 @@ $db = $_SESSION["db"];
           </div>
         </li>
       </ul>
-      <form action="index.html" class="form-inline my-2 my-lg-0">
+      <form action="index.php" class="form-inline my-2 my-lg-0">
         <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Log Out</button>
       </form>
     </div>

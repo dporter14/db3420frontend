@@ -13,8 +13,8 @@
     <div class="jumbotron">
       <div class="container">
         <h1 class="display-3"><?php echo $stuname ?>'s Schedule<h1>
-        <table class="table table-bordered bg-primary">
-          <thead>
+        <table class="table table-bordered table-striped">
+          <thead class="table-primary">
             <tr>
               <th>Course</th>
               <th>Instructor</th>
@@ -22,7 +22,7 @@
               <th>Period</th>
             </tr>
           </thead>
-          <tbody class="bg-light table-striped">
+          <tbody class="">
           <?php
             $res = pg_query($db, "select * from student_schedule where $stuid = id");
             while ($row = pg_fetch_row($res)){
@@ -42,26 +42,20 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4 bg-light">
+        <div class="col-md-4 card card-body" style="background-color:PowderBlue">
           <h2>Course History</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-            Donec sed odio dui. </p>
+          <p>See your previous courses and GPA.</p>
           <p><a class="btn btn-primary" href="history.php" role="button">View history&raquo;</a></p>
         </div>
-        <div class="col-md-4 bg-white">
+        <div class="col-md-4 card card-body bg-light">
           <h2>Drop Classes</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-            Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="drop.php" role="button">Drop &raquo;</a></p>
+          <p>Drop courses from next semester's schedule.</p>
+          <p><a class="btn btn-danger" href="drop.php" role="button">Drop &raquo;</a></p>
         </div>
-        <div class="col-md-4 bg-light">
+        <div class="col-md-4 card card-body" style="background-color:PowderBlue">
           <h2>Add Classes</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-            massa justo sit amet risus.</p>
-          <p><a class="btn btn-primary" href="add.php" role="button">Add &raquo;</a></p>
+          <p>Add courses to your next semester's schedule.</p>
+          <p><a class="btn btn-success" href="add.php" role="button">Add &raquo;</a></p>
         </div>
       </div>
 
